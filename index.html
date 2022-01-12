@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<!-- P2 - WDII, FBAUP 21/22 -->
+<!-- Ana Isabel Teixeira, Eliana Rodrigues, Rita Faria -->
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="author" content="Ana Isabel Teixeira, Eliana Rodrigues, Rita Faria">
+	<meta name="description" content="Blob is an intuitive and comprehensive app aimed at managing personal and academic projects, making use of useful tools that allow you to take notes, draw, storage images, structure tasks and view your progress in various projects at hand.">
+	<meta name="keywords" content="project, academic, drawing, task management, tracking app">
+	  
+    <title>blob</title>
+
+    <link rel="icon" href="img/nav.gif" type="image/gif" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+	  
+    <nav>
+      <img class="view" src="img/blobview.png" />
+      <img class="addProj" src="img/plus.png" />
+      <img class="nav" src="img/nav.gif" />
+      <ul class="navMenu navMenu2">
+        <li id="home">home</li>
+        <li id="newproj">new project</li>
+        <li id="about">about blob</li>
+      </ul>
+    </nav>
+
+    <main>
+		
+		
+      <h1 class="welcome">welc<img class="oh" src="img/nav.gif" />me</h1>
+		
+		
+      <!-- tutoriais para primeira utilização -->
+      <div class="start">
+        <h2 class="message">tap here to start your first project!</h2>
+        <img src="img/arrow.png" />
+      </div>
+
+      <div class="viewMsg">
+        <h2 class="message">tap here to change view mode</h2>
+        <img src="img/arrow.png" />
+      </div>
+
+      
+
+		
+	  <!-- página about -->
+      <section class="about">
+        <img class="closebtn" src="img/x.png" />
+        <article>
+          <h1>ab<img class="oh" src="img/nav.gif" />ut</h1>
+          <p><span>blob</span> is a project about projects.</p>
+          <p>this project is, foremost, a project directed at the projects projected by projectors.</p>
+          <p>by projecting a project such as this project, we project to push project-pushing people.</p>
+          <h1>team</h1>
+          <p>this project was designed and coded by <a href="https://www.behance.net/aanaisabel" target="_blank">ana isabel teixeira</a>, <a href="https://www.behance.net/elianarodrigues" target="_blank">eliana rodrigues</a> and
+            <a href="https://www.behance.net/ritafaria9" target="_blank">rita faria</a>.</p>
+          <p><span>WDII, FBAUP 2021</span></p>
+          <p>the typeface used is <a href="https://www.weltkern.com/shop/detail-typeface/everett" target="_blank">everett</a> by <a href="https://www.nolan-paparelli.ch/" target="_blank">nolan paparelli</a>.</p>
+        </article>
+      </section>
+
+		
+      <section id="registos">
+        <!-- aqui vão aparecer todos os projetos criados -->
+	
+      </section>
+
+		
+	  <!-- página de criar novo projeto -->
+      <section class="overlay" id="newProj">
+        <img class="closebtn" src="img/x-white.png" />
+
+        <div class="newProj">
+          <textarea id="projname" placeholder="new project" rows="1"></textarea>
+
+          <section class="options">
+            <div class="type">
+              <h2>type:</h2>
+              <select>
+                <option value="select">select</option>
+                <option value="editorial">editorial</option>
+                <option value="illustration">illustration</option>
+                <option value="web design">web design</option>
+                <option value="photography">photography</option>
+                <option value="video">video</option>
+                <option value="other">other</option></select><br />
+            </div>
+
+            <div class="deadline">
+              <h2>deadline:</h2>
+              <input type="date" id="deadline" name="deadline" />
+            </div>
+
+            <div class="theme">
+              <h2>theme:</h2>
+              <div class="column">
+                <div class="row">
+                  <div class="circle purple selected" id="#5435D2"></div>
+                  <div class="circle" id="#F04A4D"></div>
+                  <div class="circle" id="#FFA800"></div>
+                </div>
+                <div class="row">
+                  <div class="circle" id="#7BCCEE"></div>
+                  <div class="circle" id="#71D27A"></div>
+                  <div class="circle" id="#F48C8E"></div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <img class="confirm" id="confirm" src="img/check-white.png" />
+        </div>
+      </section>
+
+		
+	  <!-- página de projeto -->
+      <section class="openproj" id="openproj">
+        <img class="closebtn" src="img/x-white.png" />
+
+        <div class="proj">
+          <article class="info">
+            <h1 class="title"></h1>
+            <p class="tipo"></p>
+            <p class="data"></p>
+          </article>
+
+          <section class="items">
+            <div class="note">
+              <img class="save" src="img/check-white.png" />
+              <img class="closebtn" src="img/x-white.png" />
+              <textarea placeholder="write your notes here"></textarea>
+            </div>
+
+            <div class="list">
+              <img class="save" src="img/check.png" />
+              <img class="closebtn" src="img/x.png" />
+              <textarea class="listTitle" placeholder="your list title"></textarea>
+
+              <ul>
+                <div class="check"></div>
+                <li>
+                  <textarea class="task" placeholder="your first item"></textarea>
+                </li>
+                <img class="addLi" src="img/plus.png" />
+              </ul>
+            </div>
+
+            <div class="doodle">
+              <div id="doodleframe">
+                <section id="doodleframecolor"></section>
+                <section id="doodleframetool"></section>
+              </div>
+              <img class="save" src="img/check.png" />
+              <img class="closebtn" src="img/x.png" />
+            </div>
+          </section>
+
+          <div class="addItem">tap here to get started!</div>
+
+          <div class="itemMenu">
+            <img class="addMore" src="img/plus-white.png" />
+            <ul>
+              <li id="note">sticky note</li>
+              <li id="list">to do list</li>
+              <li id="doodle">doodle</li>
+              <li id="image">image</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+		
+	  <!-- página de editar projeto -->	
+      <section class="aboutproj">
+        <img class="closebtn" src="img/x-white.png" />
+
+        <div class="proj">
+          <article class="info">
+            <textarea placeholder="new project" rows="1"></textarea>
+
+            <section class="options">
+              <div class="type">
+                <h2>type:</h2>
+                <select>
+                  <option value="editorial">editorial</option>
+                  <option value="illustration">illustration</option>
+                  <option value="web design">web design</option>
+                  <option value="photography">photography</option>
+                  <option value="video">video</option>
+                  <option value="other">other</option></select><br />
+              </div>
+
+              <div class="deadline">
+                <h2>deadline:</h2>
+                <input type="date" name="deadline" />
+              </div>
+
+              <div class="theme">
+                <h2>theme:</h2>
+                <div class="column">
+                  <div class="row">
+                    <div class="circle purple selected" id="5435D2"></div>
+                    <div class="circle" id="F04A4D"></div>
+                    <div class="circle" id="FFA800"></div>
+                  </div>
+                  <div class="row">
+                    <div class="circle" id="7BCCEE"></div>
+                    <div class="circle" id="71D27A"></div>
+                    <div class="circle" id="F48C8E"></div>
+                  </div>
+                </div>
+              </div>
+
+              <h3 class="deleteProj">delete project</h3>
+            </section>
+          </article>
+        </div>
+
+        <img class="confirm" src="img/check-white.png" />
+      </section>
+    </main>
+
+	<!-- mensagem para desktop -->
+    <div class="msg-parent">
+      <p id="msg">try this on your phone!</p>
+    </div>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/p5.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/sketch.js"></script>
+  </body>
+</html>

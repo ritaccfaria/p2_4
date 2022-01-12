@@ -1,0 +1,1043 @@
+/* P2 - WDII, FBAUP 21/22 */
+/* Ana Isabel Teixeira, Eliana Rodrigues, Rita Faria */
+
+
+@charset "UTF-8";
+/* CSS Document */
+
+
+@font-face {
+    font-family: 'everettjana';
+    src: url("../fonts/everett-jana-webfont.woff2") format('woff2'),
+         url("../fonts/everett-jana-webfont.woff") format('woff'),
+		 url("../fonts/everett-jana-webfont.otf");
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'everettlight';
+    src: url("../fonts/everett-light-webfont.woff2") format('woff2'),
+         url("../fonts/everett-light-webfont.woff") format('woff'),
+		url("../fonts/everett-light-webfont.otf");
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'everettmedium';
+    src: url("../fonts/everett-medium-webfont.woff2") format('woff2'),
+         url("../fonts/everett-medium-webfont.woff") format('woff'),
+		url("../fonts/everett-medium-webfont.otf");
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'everettregular';
+    src: url("../fonts/everett-regular-webfont.woff2") format('woff2'),
+         url("../fonts/everett-regular-webfont.woff") format('woff'),
+		url("../fonts/everett-regular-webfont.otf");
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 10px;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+
+
+
+:root {
+  --purple: #5435D2;
+  --red: #F04A4D;
+  --yellow: #FFA800;
+  --blue: #7BCCEE;
+  --green: #71D27A;
+  --pink: #F48C8E;
+}
+
+
+
+
+html {
+	margin: 0; 
+	height: 100vh; 
+	overflow: hidden;     /* NÃO APAGAR ISTO */
+}
+
+/* esconder scroll bars */
+html {
+  overflow: scroll;
+}
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+#maincanvas {
+	display: block;
+	position: absolute;
+	z-index: -1;
+}
+
+#registos {
+	display: none;
+	position: absolute;
+	z-index: 0;
+	width: 84vw;
+	margin: 35% 8% 8%;
+	padding-bottom: 22%;
+}
+
+#registos article {
+	clear: both;
+	font-family: "everettlight", sans-serif;
+  	font-size: 5vw;
+  	text-decoration: none;
+  	color: #fff;
+	border-radius: 1.5rem;
+	padding: 6%;
+	margin-bottom: 4%;
+}
+
+#registos ul {
+	list-style-type: none;
+}
+
+#registos li:first-of-type {
+	font-family: "everettregular", sans-serif;
+	font-size: 8vw;
+	text-decoration: underline solid 0.2rem #fff;
+	padding-bottom: 0.6rem;
+}
+
+#registos span {
+	font-family: "everettregular", sans-serif;
+}
+
+#registos article img {
+	float: right;
+	width: 5vw;
+	padding-bottom: 1vh;
+	cursor: pointer;
+}
+
+
+
+.welcome {
+	position: absolute;
+	font-size: 12vw;
+	font-family: "everettjana", sans-serif;
+	color: #000;
+	top: 5.9%;
+	left: 5%;
+	display: flex;
+    align-items:center;
+}
+
+.oh {
+	width: 8vw;
+}
+
+.start, .viewMsg, .firstProj, .editing {
+	display: none;
+}
+
+.message {
+	position: absolute;
+	font-size: 6vw;
+    line-height: 6vw;
+	font-family: "everettregular", sans-serif;
+	color: #000;
+	bottom: 23%;
+	margin: 20%;
+	text-align: center;
+}
+
+.start img {
+	position: absolute;
+	bottom: 10%;
+	margin-left: 25%;
+	width: 30vw;
+}
+
+.viewMsg .message {
+	top: 15%;
+	bottom: 0%;
+}
+
+.viewMsg img {
+	position: absolute;
+    top: 7%;
+    margin-left: 29%;
+    width: 25vw;
+    transform: scaleY(-1) rotate(10deg);
+}
+
+.firstProj .message {
+	margin: -5% 30%;
+    position: relative;
+}
+
+.firstProj img {
+	position: relative;
+    margin-top: 5%;
+    margin-left: 26%;
+    width: 25vw;
+    transform: scaleY(-1) rotate(308deg);
+}
+
+.editing .message {
+	margin: 0% 19%;
+    position: relative;
+}
+
+.editing img {
+	position: relative;
+    margin-top: -27%;
+    margin-left: 73%;
+    width: 25vw;
+    transform: rotate(3deg);
+    z-index: 1;
+}
+
+
+
+
+
+
+
+
+.view {
+	display: none;
+	position: fixed;
+    top: 5.9%;
+	left: 5%;
+	width: 20vw;
+	z-index: 1;
+	cursor: pointer;
+}
+
+
+
+
+
+.nav {
+	display: none;
+	position: fixed;
+    bottom: 2.2%;
+	right: 5%;
+	width: 12vw;
+	z-index: 99;
+	cursor: pointer;
+}
+
+.navMenu {
+	position: fixed;
+    bottom: 11%;
+	right: -5%;
+	z-index: 99;
+	list-style-type: none;
+	text-align: right;
+	font-family: "everettregular", sans-serif;
+	font-size: 6vw;
+	line-height: 5vh;
+	transform: translate(500px);
+	transition: transform 1.2s;
+}
+
+.navMenu li {
+	width: auto;
+	margin-top: 1.5vh;;
+	padding-right: 8vw;
+	padding-left: 5vw;
+	background-color: #fff;
+	border: solid 0.2rem #000;
+	border-radius: 8rem;
+	cursor: pointer;
+	
+}
+
+.about {
+	height: 100%;
+    width: 100%;
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	background-color: #fff;
+	overflow-x: hidden;
+	transform: translateX(-500px);
+	transition: transform 1.2s;
+}
+
+.about h1 {
+	font-size: 12vw;
+	font-family: "everettjana", sans-serif;
+	color: #000;
+	display: flex;
+    align-items:center;
+	padding-bottom: 2vh;
+}
+
+.about h1:nth-of-type(2) {
+	padding-top: 4vh;
+}
+
+.about p {
+	font-family: "everettregular", sans-serif;
+	font-size: 5.9vw;
+	line-height: 115%;
+	color: #000;
+	padding-bottom: 1.5vh;
+}
+
+.about p:last-of-type {
+	padding-top: 4.5vh;
+	padding-bottom: 10vh;
+}
+
+.about a, .about a:visited, .about a:active {
+	color: #000;
+}
+
+.about span {
+	font-size: 5.5vw;
+}
+
+
+.addProj {
+	display: none;
+	position: fixed;
+    bottom: 3%;
+	left: 5%;
+	width: 12vw;
+	z-index: 1;
+	cursor: pointer;
+}
+
+.rotated {
+	transform: rotate(90deg);
+  	transition: transform 0.2s ease;
+}
+
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  background-color: var(--purple);
+  overflow-x: hidden;
+  transform: translateX(-500px);
+  transition: transform 1.2s;
+}
+
+.newProj, .proj, .about article {
+  	position: relative;
+	padding-top: 13%;
+	margin-left: 8%;
+	margin-right: 8%;
+  	text-align: left;
+}
+
+.newProj {
+	padding-top: 12%;
+}
+
+#projname::placeholder {
+	color: #CACACA;
+	text-decoration: underline solid 0.3rem #fff;
+	opacity: 1;
+}
+
+#projname, .aboutproj textarea {
+	float: left;
+	font-size: 12vw;
+	font-family: "everettjana", sans-serif;
+	text-decoration: underline solid 0.3rem #fff;
+	color: #fff;
+	width: 80%;
+	border: none;
+  	background: transparent;
+ 	outline: none;
+	padding-bottom: 7vh;
+	resize: none;
+	white-space: nowrap;
+	overflow-x: scroll;
+}
+
+.options {
+	margin-bottom: 8em;
+	
+}
+
+.options h2 {
+	font-family: "everettlight", sans-serif;
+  	font-size: 8vw;
+  	text-decoration: none;
+  	color: white;
+  	display: block;
+}
+
+.type, .deadline {
+	float: left;
+	width: 100%;
+	padding: 6% 0%;
+	border-bottom: solid white 0.2rem;
+}
+
+.theme {
+	clear: both;
+	padding: 6% 0%;
+}
+
+.options select, .deadline input {
+	font-family: "everettregular", sans-serif;
+	font-size: 8vw;
+	color: #fff;
+	border: none;
+ 	outline: none;
+	-webkit-appearance: none;
+	background: url("../img/down-white.png") no-repeat 100% center;
+	background-size: 5vw; 
+	width: 100%;
+}
+
+input[type=date] {
+	font-family: "everettregular", sans-serif;
+}
+
+::-webkit-calendar-picker-indicator {
+	background: none;
+}
+
+
+.column {
+	display: flex;
+	flex-flow: column;
+}
+
+.column .row {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+	padding-top: 1.5em;
+}
+
+.circle {
+  	height: 3.5rem;
+  	width: 3.5rem;
+  	border-radius: 50%;
+	box-sizing: border-box;
+	border: solid white 0.2rem;
+	background-color: var(--purple);
+}
+
+.circle:nth-of-type(2) {
+	background-color: var(--red);
+}
+
+.circle:nth-of-type(3) {
+	background-color: var(--yellow);
+}
+
+.row:nth-of-type(2) .circle:nth-of-type(1) {
+	background-color: var(--blue);
+}
+
+.row:nth-of-type(2) .circle:nth-of-type(2) {
+	background-color: var(--green);
+}
+
+.row:nth-of-type(2) .circle:nth-of-type(3) {
+	background-color: var(--pink);
+}
+
+.selected {
+    border: solid white 0.32rem;
+}
+
+.confirm {
+	position: sticky;
+	bottom: 3%;
+    left: 6%;
+	width: 12vw;
+	z-index: 99;
+}
+
+.overlay .closebtn, .openproj .closebtn, .aboutproj .closebtn {
+	top: 6.9%;
+}
+
+.closebtn, .proj .closebtn {
+  	position: absolute;
+  	top: 5.9%;
+  	right: 5%;
+  	width: 10vw;
+	z-index: 99;
+	cursor: pointer;
+}
+
+.save {
+	position: absolute;
+  	top: 5.9%;
+  	left: 5%;
+  	width: 10vw;
+	z-index: 102;
+	cursor: pointer;
+}
+
+.rotated2 {
+	transform: rotate(-90deg);
+	transition: transform 0.2s ease;
+}
+
+.openproj, .aboutproj {
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: var(--purple);
+	overflow-x: hidden;
+	transform: translateX(500px);
+	transition: transform 1s;
+}
+
+.aboutproj {
+	z-index: 4;
+}
+
+.title {
+	font-size: 12vw;
+	font-family: "everettjana", sans-serif;
+	text-decoration: underline solid 0.3rem #fff;
+	color: #fff;
+	width: 87%;
+	border: none;
+  	background: transparent;
+ 	outline: none;
+	resize: none;
+	white-space: nowrap;
+	overflow-x: scroll;
+	padding-bottom: 3%;
+}
+
+.tipo, .data {
+	font-family: "everettlight", sans-serif;
+  	font-size: 6vw;
+  	text-decoration: none;
+  	color: white;
+  	display: block;
+}
+
+.tipo span, .data span {
+	font-family: "everettregular", sans-serif;
+}
+
+.info {
+	padding-bottom: 8%;
+}
+
+.deleteProj {
+	font-size: 8vw;
+    font-family: "everettjana", sans-serif;
+    text-decoration: underline solid 0.2rem #fff;
+    color: #fff;
+	padding-top: 3rem;
+    text-align: center;
+	cursor: pointer;
+}
+
+.addItem {
+	font-family: "everettregular", sans-serif;
+  	font-size: 7vw;
+  	text-decoration: none;
+  	color: white;
+  	display: block;
+	border: solid white 0.2rem;
+	border-radius: 8rem;
+	padding: 6%;
+	margin-bottom: 8%;
+	cursor: pointer;
+}
+
+.itemMenu {
+	display: none;
+	padding-bottom: 12rem;
+}
+
+.itemMenu ul {
+    list-style: none;
+    margin-left: 0;
+    text-indent: 0.7rem;
+    font-family: "everettregular", sans-serif;
+    font-size: 7vw;
+	color: white;
+	text-decoration: underline 0.15rem;
+	line-height: 5vh;
+	cursor: pointer;
+}
+
+
+.addMore {
+	display: block;
+	float: left;
+	margin-top: 3%;
+    margin-bottom: 10rem;
+	height: 2.5vh;
+	cursor: pointer;
+}
+
+.note {
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  background-color: var(--blue);
+  overflow-y: hidden;
+  transform: translateY(3000px);
+  transition: transform 0.9s;
+}
+
+.note textarea {
+	position: absolute;
+    top: 10%;
+    font-size: 6vw;
+    font-family: "everettregular", sans-serif;
+    text-decoration: none;
+    color: #fff;
+    width: 80%;
+    height: 70%;
+    border: none;
+    background: transparent;
+    outline: none;
+    margin: 8%;
+	resize: none;
+}
+
+.note textarea::placeholder {
+	color: #000;
+	opacity: 1;
+}
+
+.sticky {
+	display: none;
+	clear: both;
+	font-family: "everettregular", sans-serif;
+  	font-size: 7vw;
+  	text-decoration: none;
+  	color: #fff;
+	background-color: var(--blue);
+	border-radius: 1.5rem;
+	padding: 6%;
+	margin-bottom: 8%;
+}
+
+.sticky p {
+	clear: both;
+}
+
+.edit {
+	float: right;
+	width: 5vw;
+	padding-bottom: 3vh;
+	cursor: pointer;
+}
+
+.deleteNote, .deleteList{
+    width: 6.5vw;
+	padding-bottom: 2vh;
+}
+
+.list {
+	  display: none;
+      height: 100%;
+	  width: 100%;
+	  position: fixed;
+	  z-index: 100;
+	  top: 0;
+	  left: 0;
+	  background-color: #fff;
+	  overflow-y: hidden;
+	  transform: translateY(3000px);
+	  transition: transform 0.9s;
+}
+
+.listTitle {
+	position: relative;
+    top: 10%;
+    font-size: 8vw;
+    font-family: "everettregular", sans-serif;
+    text-decoration: none;
+    color: #000;
+    width: 80%;
+    border: none;
+    background: transparent;
+    outline: none;
+    margin: 8% 8% 15%;
+	height: 34px;
+	overflow: hidden;
+	resize: none;
+}
+
+.list textarea::placeholder {
+	color: #737373;
+	opacity: 1;
+}
+
+.list ul {
+	position: relative;
+	list-style: none;
+    font-size: 6vw;
+    font-family: "everettregular", sans-serif;
+	line-height: 3.5vh;
+    text-decoration: none;
+    color: #000;
+    width: 80%;
+    height: 70%;
+    margin: 8%;
+}
+
+.check {
+	float: left;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: solid 0.15rem;
+	border-color: rgb(0,0,0);
+    margin-right: 1rem;
+	margin-top: 0.2rem;
+}
+
+.checked {
+	outline: solid 0.45rem;
+	outline-color: #000;
+	outline-offset: -2rem;
+}
+
+.crossed {
+	text-decoration: line-through;
+}
+
+.addLi {
+	display: block;
+    height: 2.5vh;
+	margin-left: 0.9%;
+    margin-top: 1%;
+}
+
+.task {
+    font-size: 6vw;
+    font-family: "everettregular", sans-serif;
+    color: #000;
+    width: 80%;
+    height: 26px;
+    border: none;
+    background: transparent;
+    outline: none;
+	overflow: hidden;
+	resize: none;
+}
+
+.toDo {
+	display: none;
+	clear: both;
+	font-family: "everettregular", sans-serif;
+  	font-size: 7vw;
+  	text-decoration: none;
+  	color: #000;
+	background-color: #fff;
+	border-radius: 1.5rem;
+	padding: 6%;
+	margin-bottom: 8%;
+}
+
+.toDo h2 {
+	padding-bottom: 1rem;
+}
+
+.toDo ul {
+	list-style: none;
+}
+
+.toDo li {
+	margin-left: 2.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.editList {
+	float: right;
+	width: 5vw;
+	padding-bottom: 3vh;
+}
+
+
+
+.desenho {
+	display: none;
+	clear: both;
+	height: 15em;
+	background-color: white;
+	border-radius: 1.5rem;
+	margin-bottom: 8%;
+    overflow: hidden;
+}
+
+#imagem {
+	margin-top: -9%;
+	width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+}
+
+.editDoodle {
+	float: right;
+	width: 5vw;
+	position:sticky;
+	top: 10%;
+	right: 6%;
+
+}
+
+.deleteDoodle {
+	width: 6.5vw;
+	position: sticky;
+	top: 10%;
+	left: 6%;
+}
+
+.doodle .closebtn {
+	z-index: 102;
+}
+
+.doodle{
+	display: none;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	background-color: white;
+	overflow-y: hidden;
+	transform: translateY(3000px);
+	transition: transform 0.9s;
+  }
+  
+  #doodleframecolor{
+	position: fixed;
+	top: 5.9%;
+	width: 100%;
+	text-align: center;
+  }
+
+  #doodleframetool{
+	  position: fixed;
+	  left: 5%;
+	  bottom: 2.2%;
+}
+
+ .doodlebuttontool, .doodlebuttoncolor{
+	z-index: 102;
+	display: none;
+	cursor: pointer;
+  }
+
+  .doodlebuttoncolor{
+	  border-radius: 100pt;
+	  width: 30pt;
+	  height: 30pt;
+	  color: transparent;
+	  border: none;
+  }
+
+  /*RED BUTTON*/
+  .doodlebuttoncolor:nth-last-of-type(4){
+	background-color: var(--red);
+  }
+
+   /*GREEN BUTTON*/
+  .doodlebuttoncolor:nth-last-of-type(3){
+	background-color: var(--green);
+	margin-left: 1.5em;
+  }
+
+   /*PURPLE BUTTON*/
+  .doodlebuttoncolor:nth-last-of-type(2){
+	background-color: var(--purple);
+	margin-left: 1.5em;
+  }
+
+   /*BLACK BUTTON*/
+  .doodlebuttoncolor:nth-last-of-type(1){
+	background-color: black;
+	margin-left: 1.5em;
+  }
+
+  .doodlebuttontool:nth-last-of-type(5),   .doodlebuttontool:nth-last-of-type(4),   .doodlebuttontool:nth-last-of-type(3){
+	vertical-align: text-bottom;
+	border-radius: 100pt;
+	color: transparent;
+	background: transparent;
+	border: solid black 0.3rem;
+}
+
+ /*SMALL BUTTON*/
+ 	.doodlebuttontool:nth-last-of-type(5){
+	width: 20pt;
+	height: 20pt;
+  }
+
+   /*MEDIUM BUTTON*/
+  .doodlebuttontool:nth-last-of-type(4){
+	width: 30pt;
+	height: 30pt;
+	margin-left: 1.5em;
+  }
+
+   /*THICK BUTTON*/
+  .doodlebuttontool:nth-last-of-type(3){
+	width: 40pt;
+	height: 40pt;
+	margin-left: 1.5em;
+  }
+
+  .doodlebuttontool:nth-last-of-type(2){
+	font-size: 5vw;
+	font-family: "everettjana", sans-serif;
+	color: black;
+	background-color: transparent;
+	border: none;
+	margin-left: 1em;
+  }
+
+  .doodlebuttontool:nth-last-of-type(1){
+	font-size: 5vw;
+	font-family: "everettjana", sans-serif;
+	color: black;
+	background-color: transparent;
+	border: none;
+	margin-left: 0.25em;
+  }
+
+  #doodlecanvas {
+	display: none;
+	z-index: 101;
+	width: 100vw;
+	height: 40vh;
+  }
+
+  #doodleframe {
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 101;
+  }
+
+
+
+
+.upload {
+	display: none;
+	clear: both;
+	background-color: white;
+	border-radius: 1.5rem;
+	margin-bottom: 8%;
+    overflow: hidden;
+}
+
+.img {
+	margin-top: -9.4%;
+	margin-bottom: -2%;
+}
+
+.deleteImg {
+	width: 6.5vw;
+	position: sticky;
+	top: 1.1rem;
+	left: 6%;
+}
+
+
+
+
+
+
+#msg {
+  display: none;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (min-width: 768px) {
+  /* Desktop */
+  .msg-parent {
+    text-align: center;
+    padding: 50vh 0;
+  }
+
+  #msg {
+    display: block;
+    font-size: 4vw;
+    font-family: "everettregular", sans-serif;
+    color: white;
+  }
+
+  html {
+    overflow: hidden;
+  }
+
+  main, nav {
+    display: none;
+  }
+}
+
